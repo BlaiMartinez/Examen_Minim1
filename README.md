@@ -50,9 +50,10 @@ Fechas en formato ISO, p. ej. `"fechaHora": "2026-12-01T10:00:00"`.
 Swagger UI disponible en `http://localhost:8080/swagger-ui/index.html`
 (herramienta de documentación/prueba del REST, sin añadir operaciones).
 
-## Estado y pendientes
+## Estado
 
 - PARTE I: dibujo de estructuras de datos y análisis de costes BigO hecho **a papel**.
-- PARTE II y III: implementadas (interfaz, fachada Singleton, Log4J2, tests JUnit, REST).
-- Pendiente: entrega (repo GitHub con este README y capturas de las partes II y III).
-- No se realiza push hasta finalizar el ejercicio.
+- PARTE II: completa — interfaz `IGestorFlota`, fachada `GestorFlotaFacade` (Singleton)
+  con trazas Log4J2 (INFO/ERROR/FATAL) y 4 tests JUnit verdes.
+- PARTE III: completa — servicio REST con las (4) operaciones, DTOs y
+  códigos de respuesta 201/200/404/409/400, documentado con Swagger.
