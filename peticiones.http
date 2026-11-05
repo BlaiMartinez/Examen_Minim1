@@ -1,0 +1,24 @@
+### ============================================================
+### Peticiones de prueba del servicio (clic en ▶ junto a cada una)
+### ============================================================
+
+### 1. Añadir un nuevo dron
+POST http://localhost:8080/api/drones
+Content-Type: application/json
+
+{"id": "D1", "nombre": "Rayo", "fabricante": "DJI", "modelo": "Mavic3", "horasVuelo": 12.5}
+
+### 2. Añadir un nuevo piloto
+POST http://localhost:8080/api/pilotos
+Content-Type: application/json
+
+{"id": "P1", "nombre": "Ana", "apellidos": "Lopez", "horasVuelo": 30}
+
+### 3. Guardar el dron D1 en el almacén (mantenimiento)
+POST http://localhost:8080/api/almacen/D1
+
+### 4. Crear un plan de vuelo
+POST http://localhost:8080/api/planes
+Content-Type: application/json
+
+{"idDron": "D1", "idPiloto": "P1", "fechaHora": "2026-12-01T10:00:00", "duracionHoras": 2, "posiciones": [{"latitud": 41.27, "longitud": 2.08}, {"latitud": 41.30, "longitud": 2.10}]}
